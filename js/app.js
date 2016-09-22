@@ -13,12 +13,13 @@ window.addEventListener("load", function (){
 		var text = document.createTextNode("Guardar");
 		form.className = "form";
 		input.className = "input";
+		input.setAttribute("placeholder", "Añadir una lista...");
 		btnGreen.className = "btnGreen";
 		btnGreen.setAttribute("type", "submit");
 		btnGreen.setAttribute("id", "btnDos")
 		contenedor.insertBefore(form, contenedor.childNodes[0]);
-		form.appendChild(btnGreen);
-		form.insertBefore(input, btnGreen);
+		form.insertBefore(input, form.childNodes[0]);
+		form.insertBefore(btnGreen,form.childNodes[1]);
 		btnGreen.appendChild(text);
 	}
 });
