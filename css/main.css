@@ -5,12 +5,13 @@
 }
 body {
 	background-color: #026AA7;
+	margin: 15px 0px;
 }
 .dNone {
 	display: none;
 }
 .btn{
-	background: rgba(0,0,0,.12);
+	background: rgba(0,0,0,0.15);
 	border-radius: 4px;
     cursor: pointer;
     color: rgba(225, 225, 225, 0.7);
@@ -25,7 +26,6 @@ body {
 .caja {
 	width: 250px;
 	margin: 0 5px;
-    height: 100%;
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
@@ -33,7 +33,7 @@ body {
 }
 .form {
 	background-color: #E2E4E6;
-	border-radius: 2px;
+	border-radius: 4px;
 	padding: 6px;
 	width: 250px;
 }
@@ -44,7 +44,7 @@ body {
 .btnGreen {
 	background-color: #61BD4F;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #fff;
     display: inline-block;
     font-weight: bold;

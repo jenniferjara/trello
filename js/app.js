@@ -20,8 +20,7 @@ window.addEventListener("load", function (){
 			contenedor.insertBefore(form, contenedor.childNodes[0]);
 			form.insertBefore(input, form.childNodes[0]);
 			form.insertBefore(btnGreen,form.childNodes[1]);
-			var text = document.createTextNode("Guardar");
-			btnGreen.appendChild(text);
+			btnGreen.innerText = "Guardar"
 		}
 		newForm();
 
@@ -29,17 +28,15 @@ window.addEventListener("load", function (){
 			btnGreen.addEventListener("click", function(e){
 				e.preventDefault();
 				form.className = "dNone";
-
 				var title = document.createElement("div");
+				var link = document.createElement("a");
+
 				title.innerText = input.value;
 				title.setAttribute("class", "list-header")
 				contenedor.insertBefore(title, contenedor.childNodes[0]);
-
-				var link = document.createElement("a");
 				link.innerText = "Anadir otra tarjeta...";
 				link.setAttribute("class", "link");
 				link.setAttribute("href", "#");
-
 				contenedor.insertBefore(link, contenedor.childNodes[1]);
 			});
 		}
