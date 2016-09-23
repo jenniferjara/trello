@@ -23,14 +23,15 @@ window.addEventListener("load", function (){
 			btnGreen.innerText = "Guardar"
 		}
 		newForm();
+		
+		btnGreen.addEventListener("click", function(e){
+			e.preventDefault();
+			form.className = "dNone";
+			var title = document.createElement("div");
+			var link = document.createElement("a");
+			newTarjeta();
 
-		function newTarjeta(){
-			btnGreen.addEventListener("click", function(e){
-				e.preventDefault();
-				form.className = "dNone";
-				var title = document.createElement("div");
-				var link = document.createElement("a");
-
+			function newTarjeta(){
 				title.innerText = input.value;
 				title.setAttribute("class", "list-header")
 				contenedor.insertBefore(title, contenedor.childNodes[0]);
@@ -38,9 +39,8 @@ window.addEventListener("load", function (){
 				link.setAttribute("class", "link");
 				link.setAttribute("href", "#");
 				contenedor.insertBefore(link, contenedor.childNodes[1]);
-			});
-		}
-		newTarjeta();
+			}
+		});
 	}
 
 });
