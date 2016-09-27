@@ -9,12 +9,14 @@ window.addEventListener("load", function (){
 	span.addEventListener("click", function(e){
 		e.preventDefault();
 		newForm();
+
 	});
 	function newForm(){
 		span.className = "dNone";
 		form.classList.add("form");
+		input.focus();
+		input.value = "";
 	}
-	
 	btnGreen.addEventListener("click", function(e){
 		e.preventDefault();
 		form.className = "dNone";
@@ -33,6 +35,11 @@ window.addEventListener("load", function (){
 		link.innerText = "Anadir otra tarjeta...";
 		link.setAttribute("class", "link");
 		padre.insertBefore(link, padre.childNodes[1]);
+
+	/*	link.addEventListener("click", function(){
+		link.className = "dNone";
+		newText(padre);
+	});*/
 	}
 
 	function nuevaCaja() {
@@ -43,5 +50,23 @@ window.addEventListener("load", function (){
 		span.className = "dInlineBlock";
 		span.className = "btn";
 		cajaDos.insertBefore(span, cajaDos.childNodes[0]);
+		cajaDos.insertBefore(form,cajaDos.childNodes[1]);
 	}
+
+	/*
+	function newText(padre){
+		var newForm = document.createElement("form");
+		var textArea = document.createElement("textarea");
+		var btnSmall = document.createElement("button");
+		
+		newForm.insertBefore(textArea, newForm.childNodes[0]);
+		newForm.insertBefore(btnSmall, newForm.childNodes[1]);
+		padre.insertBefore(newForm, padre.childNodes[1]);
+
+		btnSmall.innerText = "Añadir";
+		newForm.className = "link";
+		textArea.className = "input";
+		btnSmall.classList.add("btnGreen");
+	}
+*/
 });
