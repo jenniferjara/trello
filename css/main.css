@@ -10,12 +10,21 @@ body {
 .dNone {
 	display: none;
 }
+.dBlock {
+	display: block;
+}
+.dInlineBlock {
+	display: inline-block;
+}
+/*******************************/
+#cajaGrande {
+	display: block;
+}
 .caja {
-	width: 250px;
 	margin: 0 5px;
-    box-sizing: border-box;
     display: inline-block;
     white-space: wrap;
+    float: left;
 }
 .btn{
 	background: rgba(0,0,0,0.15);
@@ -33,6 +42,7 @@ body {
 .form {
 	background-color: #E2E4E6;
 	border-radius: 4px;
+	display: inline-block;
 	padding: 6px;
 	width: 250px;
 }

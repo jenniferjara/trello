@@ -1,46 +1,47 @@
 window.addEventListener("load", function (){
-	var contenedor = document.getElementById("caja");
-	var boton = document.getElementById("btn");
+	var cajaGrande = document.getElementById("cajaGrande");
+	var caja = document.getElementById("caja");
+	var span = document.getElementById("span");
+	var form = document.getElementById("form");
+	var input = document.getElementById("input");
+	var btnGreen = document.getElementById("btnGreen");
 
-	boton.addEventListener("click", function(){
-		newElement();
-	});
-	function newElement (){
-		var form = document.createElement("form");
-		var input = document.createElement("input");
-		var btnGreen = document.createElement("button");
-
-		function newForm(){
-			btn.className = "dNone";
-			form.className = "form";
-			input.className = "input";
-			input.setAttribute("placeholder", "Añadir una lista...");
-			btnGreen.className = "btnGreen";
-			btnGreen.setAttribute("id", "btnDos")
-			contenedor.insertBefore(form, contenedor.childNodes[0]);
-			form.insertBefore(input, form.childNodes[0]);
-			form.insertBefore(btnGreen,form.childNodes[1]);
-			btnGreen.innerText = "Guardar"
-		}
+	span.addEventListener("click", function(e){
+		e.preventDefault();
 		newForm();
-		
-		btnGreen.addEventListener("click", function(e){
-			e.preventDefault();
-			form.className = "dNone";
-			var title = document.createElement("div");
-			var link = document.createElement("a");
-			newTarjeta();
+	});
+	function newForm(){
+		span.className = "dNone";
+		form.classList.add("form");
+	}
+	
+	btnGreen.addEventListener("click", function(e){
+		e.preventDefault();
+		form.className = "dNone";
+		newTarjeta();
+		nuevaCaja();
+	});
 
-			function newTarjeta(){
-				title.innerText = input.value;
-				title.setAttribute("class", "list-header")
-				contenedor.insertBefore(title, contenedor.childNodes[0]);
-				link.innerText = "Anadir otra tarjeta...";
-				link.setAttribute("class", "link");
-				link.setAttribute("href", "#");
-				contenedor.insertBefore(link, contenedor.childNodes[1]);
-			}
-		});
+	function newTarjeta(){
+		var padre = btnGreen.parentElement.parentElement;
+		var title = document.createElement("div");
+		title.innerText = input.value;
+		title.setAttribute("class", "list-header")
+		padre.insertBefore(title, padre.childNodes[0]);
+
+		var link = document.createElement("a");
+		link.innerText = "Anadir otra tarjeta...";
+		link.setAttribute("class", "link");
+		padre.insertBefore(link, padre.childNodes[1]);
 	}
 
+	function nuevaCaja() {
+		var cajaDos = document.createElement("div");
+		cajaDos.className = "caja";
+		//cajaDos.setAttribute("id", "cajaDos");
+		cajaGrande.appendChild(cajaDos);
+		span.className = "dInlineBlock";
+		span.className = "btn";
+		cajaDos.insertBefore(span, cajaDos.childNodes[0]);
+	}
 });
