@@ -27,6 +27,7 @@ body {
     float: left;
 }
 .btn{
+	display: inline-block;
 	background: rgba(0,0,0,0.15);
 	border-radius: 4px;
     cursor: pointer;
