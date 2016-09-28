@@ -17,3 +17,11 @@
 
 1. Al dar click en "Añadir una lista", asegurarse que el input del formulario tenga el focus para poder escribir directamente el nombre de la lista.
 2. Dar click al mensaje "Añadir una tarjeta" y mostrar e formulario para agregar la tarjeta (Nota: El ingreso de texto es mediante un textarea).
+
+##Versión 0.0.5
+
+1. Al dar click en el botón de guardar al momento de añadir tarjeta, mostrar el mensaje de "Añadir tarjeta" debajo de la tarjeta añadida.
+
+##Versión 0.0.6
+
+1. Asegurar la funcionalidad de poder agregar múltiples listas y tarjetas.
