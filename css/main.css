@@ -110,3 +110,12 @@ body {
     padding: 6px;
     margin: 5px;
 }
+.over {
+  border: 2px dashed #000;
+}
+.gray{
+	background-color: #848484;
+	border-radius: 5px;
+    padding: 6px;
+    margin: 5px;
+}
