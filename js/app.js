@@ -112,5 +112,6 @@ function soltar(e) {
 	e.preventDefault();
 	var idArrastrado = e.dataTransfer.getData("text");
 	var elementoArrastrado = document.getElementById(idArrastrado);
+	elementoArrastrado.classList.add("animated", "bounce");
 	this.insertBefore(elementoArrastrado, this.lastElementChild);
 }
