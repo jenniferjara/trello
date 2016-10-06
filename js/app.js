@@ -85,17 +85,23 @@ function nuevaEntrada(){
 	var cards = document.getElementsByClassName("entrada");
 		for (var i = 0, l = cards.length; i < l; i++) {
 			cards[i].addEventListener("dragstart", empiezaArrastrar);
-			//cards[i].addEventListener("dragenter", entraArrastrar);
-			//cards[i].addEventListener("dragleave", dejaArrastrar);
+			cards[i].addEventListener("dragenter", entraArrastrar);
+			cards[i].addEventListener("dragleave", dejaArrastrar);
 			cards[i].addEventListener("dragend", terminaArrastrar);
 		}
 }
 function empiezaArrastrar(e) {
 	e.dataTransfer.setData("text", this.id);
-	this.style.opacity = "0.4";
+	this.classList.add("animated", "tada");
 }
 function terminaArrastrar(e) {
-	this.style.opacity = null;
+	this.classList.remove("animated", "tada");
+}
+function entraArrastrar(e) {
+	//this.classList.add("animated", "shake");
+}
+function dejaArrastrar(e) {
+	//this.classList.remove("animated", "shake");
 }
 
 function arrastrarSobre(e) {
