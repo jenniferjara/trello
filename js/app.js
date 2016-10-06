@@ -92,20 +92,21 @@ function nuevaEntrada(){
 }
 function empiezaArrastrar(e) {
 	e.dataTransfer.setData("text", this.id);
-	this.classList.add("animated", "tada");
+	this.classList.add("borde");
 }
 function terminaArrastrar(e) {
-	this.classList.remove("animated", "tada");
+	this.classList.remove("borde");
 }
 function entraArrastrar(e) {
-	//this.classList.add("animated", "shake");
+	this.classList.add("animated", "tada");
 }
 function dejaArrastrar(e) {
-	//this.classList.remove("animated", "shake");
+	this.classList.remove("animated", "tada");
 }
 
 function arrastrarSobre(e) {
 	e.preventDefault();
+	this.classList.add("animated", "pulse");
 }
 function soltar(e) {
 	e.preventDefault();
