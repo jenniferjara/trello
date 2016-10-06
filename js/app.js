@@ -1,12 +1,11 @@
 window.addEventListener("load", cargaPagina);
 var cajaGrande = document.getElementById("cajaGrande");
-var caja = document.getElementById("caja");
+//var caja = document.getElementById("caja");
 var span = document.getElementById("span");
 var form = document.getElementById("form");
 var input = document.getElementById("input");
 var btnGreen = document.getElementById("btnGreen");
 var contador = 1;
-
 function cargaPagina(){
 	span.addEventListener("click", newForm);
 }
@@ -17,12 +16,10 @@ function newForm(e){
 	input.focus();
 	input.value = "";
 }
-
 btnGreen.addEventListener("click", newTarjeta);
 btnGreen.addEventListener("click", nuevaCaja);
-caja.addEventListener("dragover", arrastrarSobre);
-caja.addEventListener("drop", soltar);
-
+//caja.addEventListener("dragover", arrastrarSobre);
+//caja.addEventListener("drop", soltar);
 function newTarjeta(e){
 	e.preventDefault();
 	form.className = "dNone";
@@ -44,12 +41,15 @@ function nuevaCaja() {
 	var cajaDos = document.createElement("div");
 	cajaDos.className = "caja";
 	cajaGrande.appendChild(cajaDos);
-	span.className = "btn";
+	span.className = "add";
 	cajaDos.insertBefore(span, cajaDos.childNodes[0]);
 	cajaDos.insertBefore(form, cajaDos.childNodes[1]);
 
-	cajaDos.addEventListener("dragover", arrastrarSobre);
-	cajaDos.addEventListener("drop", soltar);
+	var listas = document.getElementsByClassName("caja");
+	for (var i = 0, l = listas.length; i < l; i++) {
+		listas[i].addEventListener("dragover", arrastrarSobre);
+		listas[i].addEventListener("drop", soltar);
+	}
 }
 function newText(){
 	this.className = "dNone";
@@ -83,12 +83,12 @@ function nuevaEntrada(){
 	padre.lastChild.className = "link";
 
 	var cards = document.getElementsByClassName("entrada");
-		for (var i = 0, l = cards.length; i < l; i++) {
-			cards[i].addEventListener("dragstart", empiezaArrastrar);
-			cards[i].addEventListener("dragenter", entraArrastrar);
-			cards[i].addEventListener("dragleave", dejaArrastrar);
-			cards[i].addEventListener("dragend", terminaArrastrar);
-		}
+	for (var i = 0, l = cards.length; i < l; i++) {
+		cards[i].addEventListener("dragstart", empiezaArrastrar);
+		cards[i].addEventListener("dragenter", entraArrastrar);
+		cards[i].addEventListener("dragleave", dejaArrastrar);
+		cards[i].addEventListener("dragend", terminaArrastrar);
+	}
 }
 function empiezaArrastrar(e) {
 	e.dataTransfer.setData("text", this.id);
