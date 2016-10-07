@@ -54,7 +54,7 @@ body {
     padding: 10px;
     text-align: left;
 }
-.btn:hover{
+.add:hover{
 	background-color: #03527F;
 	color: rgba(225, 225, 225, 0.7);
 }
