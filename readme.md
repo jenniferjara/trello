@@ -25,3 +25,21 @@
 ##Versión 0.0.6
 
 1. Asegurar la funcionalidad de poder agregar múltiples listas y tarjetas.
+
+_En las siguientes versiones se añadio el efecto "Drag and Drop" o Arrastrar y Soltar_
+
+##Versión 0.1.0
+
+1. Implementar el evento Drag & Drop de las tarjetas para que pueda ser movida entre las listas creadas.
+
+##Versión 0.1.1
+
+1. Agregar un estilo personalizado a la tarjeta cuando esté siendo arrastrada por el usuario.
+
+##Versión 0.1.2
+
+1. Agregar un estilo a la lista cuando la tarjeta esté pasando por encima (dragover).
+
+##Versión 0.1.3
+
+1. Agregar una transición css cuando la tarjeta y/o lista haya sido colocada en una nueva lista.
