@@ -26,7 +26,13 @@
 
 1. Asegurar la funcionalidad de poder agregar múltiples listas y tarjetas.
 
-_En las siguientes versiones se añadio el efecto "Drag and Drop" o Arrastrar y Soltar_
+
+***
+
+_En las siguientes versiones se añadio el efecto "Drag and Drop" o Arrastrar y Soltar en las tarjetas creadas._
+
+***
+
 
 ##Versión 0.1.0
 

@@ -42,7 +42,6 @@ header{
 }
 /*******************************/
 #cajaGrande {
-	white-space: nowrap;
 	vertical-align: top;
 	padding-top: 5em;
 }
@@ -101,7 +100,7 @@ header{
 	font-weight: bold;
 	padding: 8px 10px;
 	width: 250px;
-	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 .link {
 	background-color: #E2E4E6;

@@ -25,7 +25,7 @@
 			var title = document.createElement("div");
 			var link = document.createElement("a");
 
-			title.innerText = input.value;
+			title.innerHTML = input.value;
 			title.classList.add("list-header");
 			padre.appendChild(title);
 
