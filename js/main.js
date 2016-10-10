@@ -20,25 +20,23 @@
 	function nuevaTarjeta(e){
 		e.preventDefault();
 		form.className = "dNone";
-		//if (existeContenido(input.value)) {
-			var padre = span.parentElement;
-			var title = document.createElement("div");
-			var link = document.createElement("a");
+		var padre = span.parentElement;
+		var title = document.createElement("div");
+		var link = document.createElement("a");
 
-			title.innerText = input.value;
-			title.classList.add("list-header");
-			padre.appendChild(title);
+		title.innerText = input.value.trim();
+		title.classList.add("list-header");
+		padre.appendChild(title);
 
-			link.innerText = "Añadir una tarjeta...";
-			padre.appendChild(link);
-			link.classList.add("link");
+		link.innerText = "Añadir una tarjeta...";
+		padre.appendChild(link);
+		link.classList.add("link");
 
-			padre.addEventListener("dragover", arrastrarSobre);
-			padre.addEventListener("drop", soltar);
-			padre.addEventListener("dragenter", entraArrastrar);
+		padre.addEventListener("dragover", arrastrarSobre);
+		padre.addEventListener("drop", soltar);
+		padre.addEventListener("dragenter", entraArrastrar);
 
-			link.addEventListener("click", nuevoText);
-		//}
+		link.addEventListener("click", nuevoText);
 	}
 	function nuevaCaja() {
 		var cajaDos = document.createElement("div");
@@ -122,23 +120,4 @@
 		this.insertBefore(elementoArrastrado, this.lastElementChild);
 		elementoArrastrado.classList.add("animated", "bounce");
 	}
-
-	/*function validarMensaje() {
-		var mensaje = input.value.trim();
-		if (mensaje.length == 0) {
-			boton.disabled = true;
-		} else {
-			boton.disabled = false;
-		}
-	}
-
-	function existeContenido(mensaje) {
-		mensaje = mensaje.trim();
-		if (mensaje.length == 0) {
-			return false;
-		} else {
-			return true;
-		}
-	}*/
-
 })();

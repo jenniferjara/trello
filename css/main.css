@@ -42,7 +42,6 @@ header{
 }
 /*******************************/
 #cajaGrande {
-	display: block;
 	white-space: nowrap;
 	vertical-align: top;
 	padding-top: 5em;
@@ -52,8 +51,8 @@ header{
 	border-radius: 8px;
 	margin: 0 5px;
     display: inline-block;
-    white-space: wrap;
     vertical-align: top;
+    width: 250px;
 }
 .add{
 	display: inline-block;
@@ -80,6 +79,7 @@ header{
 	width: 100%;
 	padding: 3px;
 	display: inherit;
+	overflow: hidden;
 }
 .btnGreen {
 	background-color: #61BD4F;
@@ -101,6 +101,7 @@ header{
 	font-weight: bold;
 	padding: 8px 10px;
 	width: 250px;
+	word-wrap: break-word;
 }
 .link {
 	background-color: #E2E4E6;
@@ -120,7 +121,24 @@ header{
 	border-radius: 5px;
     padding: 6px;
     margin: 5px;
+    word-wrap: break-word;
 }
 .borde {
 	border: 2px dashed  #A4A4A4;
+}
+
+/****media***/
+
+@media (max-width: 1024px){
+    
+}
+@media (max-width: 982px){
+
+}
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 640px){
+
 }
